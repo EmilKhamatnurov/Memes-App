@@ -1,0 +1,63 @@
+body,
+html {
+	width: 100%;
+	height: 100%;
+	padding: 30px 0;
+}
+
+.app-title {
+	text-align: center;
+	font-size: 50px;
+	font-weight: 500;
+	margin-bottom: 30px;
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 1150px;
+	display: flex;
+	justify-content: center;
+	align-items: start;
+	gap: 30px;
+	flex-wrap: wrap;
+}
+
+.input-block {}
+
+.block-title {
+	font-size: 45px;
+	font-weight: 400;
+	margin-bottom: 40px;
+}
+
+.input-wrapper {}
+
+.input-label {
+	font-size: 35px;
+	margin-bottom: 12px;
+}
+
+.input-field {
+	font-size: 25px;
+	padding: 12px 100px 12px 20px;
+	border: 1px solid #000000;
+	border-radius: 15px;
+	margin-bottom: 20px;
+}
+
+select {
+	width: 395px;
+}
+
+.output-block {}
+
+.mem-image-output {
+
+	border: 1px solid #000000;
+}
+
+.mem-text {}
+
+.top-text-output {}
+
+.bottom-text-output {}
