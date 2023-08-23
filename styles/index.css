@@ -52,8 +52,10 @@ select {
 .output-block {}
 
 .mem-image-output {
-
 	border: 1px solid #000000;
+	/* max-width: 20%;
+	max-height: 20%; */
+	;
 }
 
 .mem-text {}
