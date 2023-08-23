@@ -28,7 +28,7 @@ class Viev {
 	}
 
 	_renderMemImage = ({url,width,height}) => {
-		this.imageOutputNode.style.background = `url(${url}) center center / cover no-repeat`;
+		this.imageOutputNode.style.background = `url(${url}) center center / contain no-repeat`;
 		this.imageOutputNode.style.width = ` ${width}px`
 		this.imageOutputNode.style.height = `${height}px`
 	}

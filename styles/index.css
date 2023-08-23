@@ -14,17 +14,17 @@ html {
 
 .container {
 	margin: 0 auto;
-	max-width: 1150px;
+	max-width: 90%;
+	padding: 40px 0;
 	display: flex;
 	justify-content: center;
-	align-items: start;
-	gap: 30px;
+	gap: 20px;
 	flex-wrap: wrap;
-	padding: 40px 0;
 }
 
 .input-block {
-	max-width: calc(50%-15px);
+	max-width: 370px;
+	width: 100%;
 }
 
 .block-title {
@@ -42,32 +42,29 @@ html {
 }
 
 .input-field {
+	width: 340px;
 	font-size: 25px;
-	padding: 12px 100px 12px 20px;
+	padding: 12px;
 	border: 1px solid #000000;
 	border-radius: 15px;
 	margin-bottom: 20px;
 }
 
-select {
-	width: 395px;
+.select-field {
+	width: 100%;
 }
 
 .output-block {
-	max-width: calc(50%-15px);
+	max-width: 370px;
+
 }
 
 .mem-image-output {
 	border: 1px solid #000000;
-	display: flex;
 	font-size: 32px;
 	position: relative;
-	/* flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	gap: 50%; */
-	max-width: 50%;
-	max-height: 500px;
+	max-width: 100%;
+
 }
 
 .mem-text {}
