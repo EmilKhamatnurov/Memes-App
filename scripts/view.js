@@ -34,9 +34,15 @@ class Viev {
 	}
 
 	topTextChange = () => {
+		if (this.topTextInputNode.value.length > 30) {
+			return
+		}
 		this.topTextOutputNode.innerText = this.topTextInputNode.value;
 	}
 	bottomTextChange = () => {
+		if (this.bottomTextInputNode.value.length > 30) {
+			return
+		}
 		this.bottomTextOutputNode.innerText = this.bottomTextInputNode.value;
 	}
 	
