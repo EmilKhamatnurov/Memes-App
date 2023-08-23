@@ -12,17 +12,17 @@ class Controller {
 
 	init() {
 		this.api.fetchMemes()
-			.then(response => {
-				console.log(response);
-				this.model.saveMemes(response.data.memes);
-				this.viev.renderImageOptions(this.model.memes);
-				// console.log(this.model.memes);
+		.then(response => {
+			this.model.saveMemes(response.data.memes);
+			this.viev.renderImageOptions(this.model.memes);
+			this.viev._renderMemImage({
+				url: this.model.memes[0].url,
+				width: this.model.memes[0].width,
+				height: this.model.memes[0].height,
 			})
+		})
 	}
 
-	// handleTopTextChanged(a, b) {
-	// 	console.log(a, b);
-	// }
 	handleImageInputChange = (memId) => {
 		console.log(memId);
 		this.model.setImage(memId);

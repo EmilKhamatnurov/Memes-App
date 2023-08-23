@@ -10,15 +10,17 @@ class Viev {
 		this.bottomTextOutputNode = document.querySelector('#bottomTextOutput');
 
 		this.onImageChange = onImageChange;
-		this.imageSelectorNode.addEventListener('change', this.a)
+		// Отработчики
+		this.imageSelectorNode.addEventListener('change', this.selectOption)
+		this.topTextInputNode.addEventListener('input', this.topTextChange)
+		this.bottomTextInputNode.addEventListener('input', this.bottomTextChange)
 	}
 
-	a = () => {
+	selectOption = () => {
 		this.onImageChange(this.imageSelectorNode.value)
 	}
 
 	renderImageOptions(memes) {
-		// Рендер опций картинок
 		memes.forEach(mem => {
 			this.imageSelectorNode.innerHTML +=
 			`<option value="${mem.id}" class="option-text">${mem.name}</option>`
@@ -31,7 +33,11 @@ class Viev {
 		this.imageOutputNode.style.height = `${height}px`
 	}
 
-	textInputChanged = () => {
-		this.onImageChange(this.topTextInputNode.value, this.bottomTextInputNode.value);
+	topTextChange = () => {
+		this.topTextOutputNode.innerText = this.topTextInputNode.value;
 	}
+	bottomTextChange = () => {
+		this.bottomTextOutputNode.innerText = this.bottomTextInputNode.value;
+	}
+	
 }

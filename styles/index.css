@@ -22,12 +22,15 @@ html {
 	flex-wrap: wrap;
 }
 
-.input-block {}
+.input-block {
+	max-width: calc(50%-15px);
+}
 
 .block-title {
 	font-size: 45px;
 	font-weight: 400;
 	margin-bottom: 40px;
+	text-align: center;
 }
 
 .input-wrapper {}
@@ -49,13 +52,20 @@ select {
 	width: 395px;
 }
 
-.output-block {}
+.output-block {
+	max-width: calc(50%-15px);
+}
 
 .mem-image-output {
 	border: 1px solid #000000;
-	/* max-width: 20%;
-	max-height: 20%; */
-	;
+	display: flex;
+	font-size: 32px;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 50%;
+	max-width: 100%;
+	max-height: 1000px;
 }
 
 .mem-text {}
