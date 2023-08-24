@@ -25,7 +25,6 @@ class Controller {
 
 	handleImageInputChange = (memId) => {
 		this.model.getImage(memId);
-		// this.model.getBoxCount()
 	}
 
 	handleImageChange = (memObject, box_count) => {

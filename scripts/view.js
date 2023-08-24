@@ -66,21 +66,5 @@ class Viev {
 		const outputField = document.querySelector(`div[data-textoutput='${inputField.dataset.textinput}']`);
 		outputField.innerText = inputField.value;
 	}
-
-
-	// ПОМЕНЯТЬ
-	// topTextChange = () => {
-	// 	if (this.topTextInputNode.value.length > 30) {
-	// 		return
-	// 	}
-		
-	// }
-
-	bottomTextChange = () => {
-		if (this.bottomTextInputNode.value.length > 30) {
-			return
-		}
-		this.bottomTextOutputNode.innerText = this.bottomTextInputNode.value;
-	}
 	
 }
