@@ -34,8 +34,6 @@ html {
 	text-align: center;
 }
 
-.input-wrapper {}
-
 .input-label {
 	font-size: 35px;
 	margin-bottom: 12px;
@@ -60,11 +58,10 @@ html {
 }
 
 .mem-image-output {
-	border: 1px solid #000000;
-	font-size: 24px;
+	color: aliceblue;
 	position: relative;
 	max-width: 100%;
-
+	border: 1px solid #000000;
 }
 .mem-image {
 	z-index: 0;
@@ -77,20 +74,9 @@ html {
 	position: absolute;
 	z-index: 100;
 	text-align: center;
+	font-size: 26px;
+	font-weight: 700;
+	-webkit-text-stroke: 1px #000000;
+	text-stroke: 1px #000000;
 }
 
-/* .top-text-output {
-	top: 20%;
-	left: 50%;
-	
-}
-
-.bottom-text-output {
-	top: 70%;
-	left: 50%;
-	cursor: grab;
-	position: absolute;
-	z-index: 100;
-
-	text-align: center;
-} */

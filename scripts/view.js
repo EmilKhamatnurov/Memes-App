@@ -39,17 +39,25 @@ class Viev {
 	_renderInputsAndOutpust = (box_count) => {
 		this.inputsFieldsNode.innerHTML = '';
 		this.outputsFieldNode.innerHTML = '';
-		for (let index = 0; index < box_count; index++) {
+		for (let index = 1; index <= box_count; index++) {
 			// Ренден полей ввода текста
 			this.inputsFieldsNode.innerHTML += 
 			`<div class="input-wrapper">
 				<p class="input-label">Текст ${index}</p>
-				<input data-textInput="${index}" id="topTextInput" type="text" class="input-field">
+				<input 
+					data-textInput="${index}" 
+					id="topTextInput"
+					class="input-field" 
+					type="text">
 			</div>`;
 
 			// Рендер элементов вывода текста
 			this.outputsFieldNode.innerHTML += 
-			`<div data-textOutput="${index}" class="mem-text"></div>`;
+			`<div 
+				data-textOutput="${index}" 
+				class="mem-text"
+				style="top:${index * 10}%; left: 50%;">
+			</div>`;
 		}
 	}
 
