@@ -10,22 +10,16 @@ class Model {
 		this.memes = memesData.map(mem => {return mem});
 	}
 
-	setImage = (memId) => {
+	getImage = (memId) => {
 		const mem = this.memes.find(object => object.id === memId);
-
+		const box_count = this._getBoxCount(mem);
 		this.onImageChange({
 			url: mem.url,
 			width: mem.width,
-			height: mem.height
-		})
-			
+		}, box_count)
 	}
 
-	// getMemes = () => {
-	// 	return this.memes;
-	// }
-
-	// _isTextValid(text) {
-	// 	return text.length > 50;
-	// }
+	_getBoxCount = (mem) => {
+		return mem.box_count
+	}
 }

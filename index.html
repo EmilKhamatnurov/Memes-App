@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="styles/index.css">
 </head>
 <body>
-	<h1 class="app-title">Приложение для создания мемов</h1>
+	<h1 class="app-title">Mems Creator</h1>
     <div class="container">
 		<div class="input-block">
 			<h2 class="block-title">Настройки:</h2>
@@ -25,22 +25,30 @@
 					<option value="One does not simply" class="option-text">One does not simply</option>
 				</select>
 			</div>
-			<!-- Текст сверху -->
-			<div class="input-wrapper">
-				<p class="input-label">Текст сверху</p>
-				<input id="topTextInput" type="text" class="input-field">
-			</div>
-			<!-- Текст снизу -->
-			<div class="input-wrapper">
-				<p class="input-label">Текст снизу</p>
-				<input id="bottomTextInput" type="text" class="input-field">
+
+			<div id="inputsFields" class="inputs-fields">
+
+				<!-- 
+				<div class="input-wrapper">
+					<p class="input-label">Текст 1</p>
+					<input data-textInput="" id="topTextInput" type="text" class="input-field">
+				</div>
+
+				<div class="input-wrapper">
+					<p class="input-label">Текст 2</p>
+					<input id="bottomTextInput" type="text" class="input-field">
+				</div> -->
+
 			</div>
 		</div>
 		<div class="output-block">
 			<h2 class="block-title">Превью:</h2>
 			<div id="imageOutput" class="mem-image-output">
-				<div id="topTextOutput" class="mem-text top-text-output"></div>
-				<div id="bottomTextOutput" class="mem-text bottom-text-output"></div>
+
+				<img id="memImage" class="mem-image">
+				<div id="outputsField">
+					<!-- <div data-textOutput="" class="mem-text"></div> -->
+				</div>
 			</div>
 		</div>
 	</div>

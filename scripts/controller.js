@@ -13,23 +13,24 @@ class Controller {
 	init() {
 		this.api.fetchMemes()
 		.then(response => {
+			console.log(response);
 			this.model.saveMemes(response.data.memes);
 			this.viev.renderImageOptions(this.model.memes);
 			this.viev._renderMemImage({
 				url: this.model.memes[0].url,
 				width: this.model.memes[0].width,
-				height: this.model.memes[0].height,
 			})
 		})
 	}
 
 	handleImageInputChange = (memId) => {
-		console.log(memId);
-		this.model.setImage(memId);
+		this.model.getImage(memId);
+		// this.model.getBoxCount()
 	}
 
-	handleImageChange = (memObject) => {
+	handleImageChange = (memObject, box_count) => {
 		this.viev._renderMemImage(memObject);
+		this.viev._renderInputsAndOutpust(box_count);
 	}
 
 }
