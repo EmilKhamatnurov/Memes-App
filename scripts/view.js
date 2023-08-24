@@ -3,24 +3,25 @@ class Viev {
 		// Элементы input
 		this.imageSelectorNode = document.querySelector('#imageSelector');
 		this.inputsFieldsNode = document.querySelector('#inputsFields');
-		// this.topTextInputNode = document.querySelector('#topTextInput');
-		// this.bottomTextInputNode = document.querySelector('#bottomTextInput');
 		// Элемиенты output
 		this.imageOutputNode = document.querySelector('#imageOutput');
-		this.memImageNode = document.querySelector('#memImage'); 
-		// this.topTextOutputNode = document.querySelector('#topTextOutput');
-		// this.bottomTextOutputNode = document.querySelector('#bottomTextOutput');
 		this.outputsFieldNode = document.querySelector('#outputsField'); 
+		this.memImageNode = document.querySelector('#memImage'); 
 
 		this.onImageChange = onImageChange;
 		// Отработчики
 		this.imageSelectorNode.addEventListener('change', this.selectOption)
-		// this.topTextInputNode.addEventListener('input', this.topTextChange)
-		// this.bottomTextInputNode.addEventListener('input', this.bottomTextChange)
+		this.inputsFieldsNode.addEventListener('input', (element) => {this.typeText(element)}) 
 	}
 
 	selectOption = () => {
-		this.onImageChange(this.imageSelectorNode.value)
+		this.onImageChange(this.imageSelectorNode.value);
+		const outputFields = document.querySelectorAll('[data-textoutput]');
+		console.log(outputFields);
+		outputFields.forEach(field => {
+			dragElement(field);
+		});
+
 	}
 
 	renderImageOptions(memes) {
@@ -52,17 +53,20 @@ class Viev {
 		}
 	}
 
-
-
+	typeText (element) {
+		const inputField = element.target.closest(`input`);
+		const outputField = document.querySelector(`div[data-textoutput='${inputField.dataset.textinput}']`);
+		outputField.innerText = inputField.value;
+	}
 
 
 	// ПОМЕНЯТЬ
-	topTextChange = () => {
-		if (this.topTextInputNode.value.length > 30) {
-			return
-		}
-		this.topTextOutputNode.innerText = this.topTextInputNode.value;
-	}
+	// topTextChange = () => {
+	// 	if (this.topTextInputNode.value.length > 30) {
+	// 		return
+	// 	}
+		
+	// }
 
 	bottomTextChange = () => {
 		if (this.bottomTextInputNode.value.length > 30) {

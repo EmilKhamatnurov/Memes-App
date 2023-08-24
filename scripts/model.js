@@ -3,7 +3,6 @@ class Model {
 		this.isError = false;
 		this.memes = [];
 		this.onImageChange = onImageChange
-
 	}
 	// Ограничение длины текста в 50 символов
 	saveMemes(memesData) {

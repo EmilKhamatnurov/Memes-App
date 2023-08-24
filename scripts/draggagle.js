@@ -1,5 +1,7 @@
-dragElement(document.querySelector('#topTextOutput'));
-dragElement(document.querySelector('#bottomTextOutput'));
+// (document.querySelector('div[data-textoutput]'));
+
+// console.log(outputFields);
+
 
 function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
