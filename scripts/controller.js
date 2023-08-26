@@ -20,6 +20,7 @@ class Controller {
 				url: this.model.memes[0].url,
 				width: this.model.memes[0].width,
 			})
+			this.viev._renderInputsAndOutpust(this.model.memes[0].box_count)
 		})
 	}
 

@@ -62,6 +62,7 @@ html {
 	position: relative;
 	max-width: 100%;
 	border: 1px solid #000000;
+	margin-bottom: 5px;
 }
 .mem-image {
 	z-index: 0;
@@ -79,4 +80,6 @@ html {
 	-webkit-text-stroke: 1px #000000;
 	text-stroke: 1px #000000;
 }
-
+.info-text {
+	text-align: center;
+}
