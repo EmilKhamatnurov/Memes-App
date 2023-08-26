@@ -16,12 +16,14 @@ class Viev {
 
 	selectOption = () => {
 		this.onImageChange(this.imageSelectorNode.value);
+		this._createTextDraggable();
+	}
+
+	_createTextDraggable = () => {
 		const outputFields = document.querySelectorAll('[data-textoutput]');
-		console.log(outputFields);
 		outputFields.forEach(field => {
 			dragElement(field);
 		});
-
 	}
 
 	renderImageOptions(memes) {
@@ -41,24 +43,29 @@ class Viev {
 		this.outputsFieldNode.innerHTML = '';
 		for (let index = 1; index <= box_count; index++) {
 			// Ренден полей ввода текста
-			this.inputsFieldsNode.innerHTML += 
-			`<div class="input-wrapper">
-				<p class="input-label">Текст ${index}</p>
-				<input 
-					data-textInput="${index}" 
-					id="topTextInput"
-					class="input-field" 
-					type="text">
-			</div>`;
-
+			this.inputsFieldsNode.innerHTML += this._buildInputHtml(index);
 			// Рендер элементов вывода текста
-			this.outputsFieldNode.innerHTML += 
-			`<div 
-				data-textOutput="${index}" 
-				class="mem-text"
-				style="top:${index * 10}%; left: 50%;">
-			</div>`;
+			this.outputsFieldNode.innerHTML += this._buildOutputHtml(index);
 		}
+	}
+
+	_buildInputHtml = (index) => {
+		return `<div class="input-wrapper">
+					<p class="input-label">Текст ${index}</p>
+					<input 
+						data-textInput="${index}" 
+						id="topTextInput"
+						class="input-field" 
+						type="text">
+				</div>`
+	}
+
+	_buildOutputHtml = (index) => {
+		return `<div 
+					data-textOutput="${index}" 
+					class="mem-text"
+					style="top:${index * 10}%; left: 50%;">
+				</div>`
 	}
 
 	typeText (element) {

@@ -13,7 +13,6 @@ class Controller {
 	init() {
 		this.api.fetchMemes()
 		.then(response => {
-			console.log(response);
 			this.model.saveMemes(response.data.memes);
 			this.viev.renderImageOptions(this.model.memes);
 			this.viev._renderMemImage({
@@ -21,6 +20,7 @@ class Controller {
 				width: this.model.memes[0].width,
 			})
 			this.viev._renderInputsAndOutpust(this.model.memes[0].box_count)
+			this.viev._createTextDraggable();
 		})
 	}
 
